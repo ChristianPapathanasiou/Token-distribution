@@ -11,7 +11,7 @@ struct DepositEntry:
     amount: uint256
 
 @external 
-def distribute(entries: DepositEntry[3],erc20_token:address):
+def distribute(entries: DepositEntry[],erc20_token:address):
     total_amount: uint256 = 0
     for entry in entries:
         total_amount = total_amount + entry.amount 
